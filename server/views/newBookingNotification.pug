@@ -1,0 +1,120 @@
+html(lang="en")
+head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title New Booking - Luxego Auto Spa
+    style.
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0B0B0B;
+            color: #FFFFFF;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #121212;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #D4AF37;
+        }
+        .header {
+            background-color: #0B0B0B;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #D4AF37;
+        }
+        .header h1 {
+            color: #D4AF37;
+            margin: 0;
+            font-family: 'Playfair Display', serif;
+        }
+        .content {
+            padding: 30px;
+        }
+        .booking-details {
+            background-color: rgba(212, 175, 55, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .detail-row {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        .detail-label {
+            font-weight: bold;
+            width: 150px;
+            color: #D4AF37;
+        }
+        .footer {
+            background-color: #0B0B0B;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #D4AF37;
+            color: #B5B5B5;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #D4AF37;
+            color: #0B0B0B;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            margin: 5px;
+        }
+
+body
+    .container
+        .header
+            h1 Luxego Auto Spa
+            p Admin Notification
+        
+        .content
+            h2 New Booking Received!
+            p A new booking has been submitted through the website. Please review the details below:
+            
+            .booking-details
+                h3 Booking Details
+                .detail-row
+                    .detail-label Booking ID:
+                    .detail-value #{booking._id}
+                .detail-row
+                    .detail-label Name:
+                    .detail-value #{booking.name}
+                .detail-row
+                    .detail-label Phone:
+                    .detail-value #{booking.phone}
+                .detail-row
+                    .detail-label Email:
+                    .detail-value #{booking.email}
+                .detail-row
+                    .detail-label Vehicle:
+                    .detail-value #{booking.vehicle}
+                .detail-row
+                    .detail-label Package:
+                    .detail-value #{booking.package}
+                .detail-row
+                    .detail-label Address:
+                    .detail-value #{booking.address}
+                .detail-row
+                    .detail-label Status:
+                    .detail-value #{booking.status}
+                .detail-row
+                    .detail-label Date:
+                    .detail-value #{booking.createdAt}
+                if booking.specialRequests
+                    .detail-row
+                        .detail-label Special Requests:
+                        .detail-value #{booking.specialRequests}
+            
+            p Please contact the customer to confirm the appointment and discuss any special requirements.
+            
+            .action-buttons
+                a.btn(href="tel:#{booking.phone}") Call Customer
+                a.btn(href="mailto:#{booking.email}") Email Customer
+        
+        .footer
+            p © 2025 Luxego Auto Spa Admin System

@@ -7,7 +7,7 @@ dotenv.config();
 const connectDB = async () => {
     try {
         // MongoDB Atlas connection string
-        const dbURI = process.env.DATABASE || 'mongodb+srv://rajusivakumar453_db_user:DzUftqv0rgkpZVBm@cluster0.2daknwb.mongodb.net/?appName=Cluster0';
+        const dbURI = process.env.DATABASE_LOCAL ||process.env.DATABASE;
         
         // Connect to MongoDB
         const conn = await mongoose.connect(dbURI, {

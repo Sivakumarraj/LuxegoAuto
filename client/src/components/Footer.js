@@ -13,8 +13,9 @@ const Footer = () => {
 
     const socialLinks = [
         { name: 'Instagram', icon: 'fa-instagram', href: 'https://instagram.com/luxego_autospa' },
+        { name: 'TikTok', icon: 'fa-tiktok', href: 'https://tiktok.com/@luxego_autospa' },
         { name: 'Facebook', icon: 'fa-facebook', href: '#' },
-        { name: 'TikTok', icon: 'fa-tiktok', href: 'https://tiktok.com/@luxego_autospa' }
+        { name: 'Twitter', icon: 'fa-twitter', href: '#' }
     ];
 
     return (
@@ -36,6 +37,7 @@ const Footer = () => {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     aria-label={social.name}
+                                    className={social.name === 'TikTok' ? 'tiktok' : ''}
                                 >
                                     <i className={`fab ${social.icon}`}></i>
                                 </a>
@@ -58,7 +60,7 @@ const Footer = () => {
                         <h3>Contact Info</h3>
                         <div className="contact-item">
                             <i className="fas fa-phone"></i>
-                            <a href="tel:07721482404">07721482404</a>
+                            <a href="tel:+447776648820">+44 7776 648820</a>
                         </div>
                         <div className="contact-item">
                             <i className="fas fa-envelope"></i>
@@ -67,6 +69,16 @@ const Footer = () => {
                         <div className="contact-item">
                             <i className="fas fa-map-marker-alt"></i>
                             <span>Chelmsford, Essex, UK</span>
+                        </div>
+                        <div className="contact-item">
+                            <i className="fab fa-tiktok"></i>
+                            <a 
+                                href="https://tiktok.com/@luxego_autospa" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                            >
+                                @luxego_autospa
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -126,12 +138,24 @@ const Footer = () => {
                     align-items: center;
                     justify-content: center;
                     transition: all 0.3s ease;
+                    text-decoration: none;
                 }
                 
                 .social-links a:hover {
                     background: var(--accent-gold);
                     color: var(--bg-dark);
                     transform: translateY(-3px);
+                }
+                
+                .social-links a.tiktok {
+                    background: rgba(0, 0, 0, 0.8);
+                    color: #FF0050;
+                    border: 1px solid #FF0050;
+                }
+                
+                .social-links a.tiktok:hover {
+                    background: #FF0050;
+                    color: white;
                 }
                 
                 .footer-links h3,
@@ -143,6 +167,8 @@ const Footer = () => {
                 
                 .footer-links ul {
                     list-style: none;
+                    padding: 0;
+                    margin: 0;
                 }
                 
                 .footer-links li {
@@ -153,6 +179,7 @@ const Footer = () => {
                     color: var(--text-secondary);
                     transition: all 0.3s ease;
                     display: inline-block;
+                    text-decoration: none;
                 }
                 
                 .footer-links a:hover {
@@ -171,15 +198,21 @@ const Footer = () => {
                 .contact-item i {
                     color: var(--accent-gold);
                     width: 20px;
+                    flex-shrink: 0;
                 }
                 
                 .contact-item a {
                     color: var(--text-secondary);
                     transition: all 0.3s ease;
+                    text-decoration: none;
                 }
                 
                 .contact-item a:hover {
                     color: var(--accent-gold);
+                }
+                
+                .contact-item:nth-child(4) i {
+                    color: #FF0050;
                 }
                 
                 .footer-bottom {
@@ -199,6 +232,7 @@ const Footer = () => {
                 .footer-bottom-links a {
                     color: var(--text-secondary);
                     transition: all 0.3s ease;
+                    text-decoration: none;
                 }
                 
                 .footer-bottom-links a:hover {
@@ -225,6 +259,10 @@ const Footer = () => {
                     
                     .footer-brand h2 {
                         font-size: 1.8rem;
+                    }
+                    
+                    .social-links {
+                        justify-content: center;
                     }
                 }
             `}</style>

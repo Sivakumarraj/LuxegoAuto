@@ -19,6 +19,7 @@ function App() {
             const isScrolled = window.scrollY > 50;
             setScrolled(isScrolled);
 
+            // Update active section based on scroll position
             const sections = ['home', 'services', 'reviews', 'booking', 'contact'];
             const scrollPosition = window.scrollY + 100;
 
