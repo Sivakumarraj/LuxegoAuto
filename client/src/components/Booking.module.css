@@ -1,0 +1,54 @@
+.bookingContainer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem;
+}
+
+.submitMessage {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+.bookingForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.formRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.submitBtn {
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    align-self: center;
+    min-width: 200px;
+}
+
+@media (max-width: 768px) {
+    .bookingContainer {
+        padding: 2rem 1.5rem;
+    }
+    
+    .formRow {
+        grid-template-columns: 1fr;
+    }
+    
+    .submitBtn {
+        width: 100%;
+    }
+}

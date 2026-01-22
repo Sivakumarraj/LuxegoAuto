@@ -1,0 +1,49 @@
+{
+  "name": "luxego-autospa",
+  "version": "1.0.0",
+  "description": "Luxego Auto Spa - Premium mobile car detailing MERN stack application",
+  "main": "server/server.js",
+  "scripts": {
+    "install-client": "cd client && npm install",
+    "install-server": "cd server && npm install",
+    "install-all": "npm run install-client && npm run install-server",
+    "client": "cd client && npm start",
+    "server": "cd server && npm start",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "cd client && npm run build",
+    "start": "cd server && npm start",
+    "heroku-postbuild": "npm run install-client && npm run build",
+    "test": "cd client && npm test -- --coverage --watchAll=false",
+    "eject": "cd client && npm run eject",
+    "lint": "cd client && npm run lint && cd ../server && npm run lint",
+    "lint:fix": "cd client && npm run lint:fix && cd ../server && npm run lint:fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/luxego-autospa.git"
+  },
+  "keywords": [
+    "car detailing",
+    "auto spa",
+    "mobile car wash",
+    "luxury car care",
+    "mern",
+    "react",
+    "nodejs",
+    "mongodb",
+    "express"
+  ],
+  "author": "Luxego Auto Spa Team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yourusername/luxego-autospa/issues"
+  },
+  "homepage": "https://github.com/yourusername/luxego-autospa#readme",
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  }
+}

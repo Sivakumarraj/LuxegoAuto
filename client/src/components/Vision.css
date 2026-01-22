@@ -1,0 +1,65 @@
+.vision-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.vision-card {
+    padding: 2.5rem 2rem;
+    text-align: center;
+    height: 100%;
+    background: rgba(18, 18, 18, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 16px;
+    border: 1px solid var(--border-gold);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease;
+}
+
+.vision-card:hover {
+    transform: translateY(-10px);
+}
+
+.vision-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.vision-card:hover .vision-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.vision-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.vision-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .vision-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .vision-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .vision-icon {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .vision-grid {
+        grid-template-columns: 1fr;
+    }
+}
